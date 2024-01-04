@@ -75,13 +75,13 @@ async fn run_cache_mode(duration_seconds: u64) -> Result<(), Box<dyn std::error:
         }
     }
 
-    // Calculate average price
+    
     let average_price = prices.iter().sum::<f64>() / prices.len() as f64;
 
-    // Print result
+
     println!("Cache complete. The average USD price of BTC is: {}", average_price);
 
-    // Save results to a file
+    
     save_to_file("cache_results.txt", average_price)?;
 
     Ok(())
